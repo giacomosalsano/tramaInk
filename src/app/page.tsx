@@ -12,30 +12,40 @@ import { NavBar } from "./components/nav_bar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center align-middle text-center justify-between p-3">
 
       <Header />
       <NavBar />
 
-      <div className="mt-5 mb-5 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      <div className="text-center grid-rows-5 justify-center items-center align-middle ">
 
-        <div id="#id_estudio">
+        <div 
+          id="#id_estudio"
+          className="mt-5 mb-5 lg:mb-0 align-middle text-center grid-rows-5">
           <O_Estudio />
         </div>
         
-        <div id="#id_quemsomos">
+        <div 
+          id="#id_quemsomos"
+          className="mt-5 mb-5 lg:mb-0 align-middle text-center grid-rows-5">
           <Quem_Somos />
         </div>
 
-        <div id="#id_agenda">
-          <Agenda />
-        </div>
-
-        <div id="#id_maissobrenos">
+        <div 
+          id="#id_maissobrenos"
+          className="mt-5 mb-5 lg:mb-0 align-middle text-center grid-rows-5">
           <MaisSobreNos />
         </div>
 
-        <div id="#id_contatos">
+        <div 
+          id="#id_agenda"
+          className="mt-5 mb-5 lg:mb-0 align-middle text-center grid-rows-5">
+          <Agenda />
+        </div>
+
+        <div 
+          id="#id_contatos"
+          className="mt-5 mb-5 lg:mb-0 align-middle text-center grid-rows-5">
           <Contatos />
         </div>
         
