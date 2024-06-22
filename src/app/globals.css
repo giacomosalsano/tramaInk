@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #e7e7e7;
+
+    --menu-bg: #0b0b0b;
+    --menu-foreground: #242424;
+
+    --primary: #8c8c8c;
+    --primary-hover: #242424;
+    --primary-foreground: #444444;
+
+    --secondary: #3c3c3c;
+    --secondary-foreground: #7c7c7c;
+
+    --text-primary: #333333;
+    --text-secondary: #6f6e6e;
+    --text-tertiary: #d9d8d8;
+    --text-disabled: #9ca3af;
+
+    --error: #981313;
+    --success: #0d7f37;
+    --alert: #ac6310;
+    --info: #1174bb;
+
+    --disabled: #d1d5db;
+
+    --border: #E7E7E7;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+
+
+
+  ::-webkit-scrollbar-thumb {
+    width: 1px;
+    background-color: #3f1227;
+    border-radius: 4px;
+  }
+}
