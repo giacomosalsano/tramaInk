@@ -27,7 +27,10 @@ export default function Home() {
         <Contatos />
       </div>
 
-      <Footer />
+      <div>
+        <Footer />
+      </div>
+
     </main>
   );
 }

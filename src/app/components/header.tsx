@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex"> 
+    <div className="bg-background dark:bg-secondary  max-w-fit items-center justify-between text-sm lg:flex"> 
       <div className="fixed align-middle gap-3 left-0 top-0 flex w-full justify-center border-b p-3 border-b-gray-300 ">
         <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
