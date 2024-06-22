@@ -39,10 +39,10 @@ body {
     --background: #FFFFFF;
     --foreground: #e7e7e7;
 
-    --menu-bg: #0b0b0b;
-    --menu-foreground: #242424;
+    --menu-bg: #242424;
+    --menu-foreground: #8c8c8c;
 
-    --primary: #8c8c8c;
+    --primary: #0b0b0b;
     --primary-hover: #242424;
     --primary-foreground: #444444;
 

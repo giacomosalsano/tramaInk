@@ -6,6 +6,7 @@ import { Agenda } from "./components/agenda"
 import { MaisSobreNos } from "./components/mais_sobre_nos"
 import { Contatos } from "./components/contatos"
 import { Footer } from "./components/footer"
+import { NavBar } from "./components/nav_bar";
 
 
 
@@ -14,17 +15,30 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
       <Header />
+      <NavBar />
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <O_Estudio />
+      <div className="mt-5 mb-5 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
 
-        <Quem_Somos />
-   
-        <Agenda />
+        <div id="#id_estudio">
+          <O_Estudio />
+        </div>
+        
+        <div id="#id_quemsomos">
+          <Quem_Somos />
+        </div>
 
-        <MaisSobreNos />
+        <div id="#id_agenda">
+          <Agenda />
+        </div>
 
-        <Contatos />
+        <div id="#id_maissobrenos">
+          <MaisSobreNos />
+        </div>
+
+        <div id="#id_contatos">
+          <Contatos />
+        </div>
+        
       </div>
 
       <div>
