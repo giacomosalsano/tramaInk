@@ -1,6 +1,6 @@
 export function NavBar () {
   return (
-    <div className="fixed top-5 left-0 right-0 border-text-tertiary bg-primary flex w-full justify-center border-b pb-3 mt-20 
+    <div className="fixed z-10 top-5 left-0 right-0 border-text-tertiary bg-primary flex w-full justify-center border-b pb-3 mt-20 
     border-b-menu-foreground space-x-6">
       <a 
       href="#id_estudio"

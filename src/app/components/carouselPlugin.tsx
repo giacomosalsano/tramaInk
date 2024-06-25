@@ -1,7 +1,8 @@
 'use client' 
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
-import {foto_bar, foto_studio_1, foto_studio_2, } from "../../assets"
+import Image from "next/image";
+import {fotobar, fotostudio1, fotostudio2, } from "../../../public"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -11,7 +12,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import Image from "next/image"
 
 type ImageInfo = {
   id: number;
@@ -28,13 +28,19 @@ const images = [
     id: 1,
     name: "Studio 1",
     caption: "Studio 1",
-    imageURL: "https://github.com/giacomosalsano/tramaInk/blob/978ca644a0cdfae488acb425586219bba00c8617/src/assets/foto_studio_1.jpg"
+    imageURL: "https://github.com/giacomosalsano/tramaInk/blob/master/src/assets/fotostudio1.jpg"
   },
   {
     id: 2,
     name: "Studio 2",
     caption: "Studio 2",
-    imageURL: "https://github.com/giacomosalsano/tramaInk/blob/978ca644a0cdfae488acb425586219bba00c8617/src/assets/foto_studio_2.jpg"
+    imageURL: "https://github.com/giacomosalsano/tramaInk/blob/master/src/assets/fotostudio2.jpg"
+  },
+  {
+    id: 3,
+    name: "Bar",
+    caption: "Bar",
+    imageURL: "https://github.com/giacomosalsano/tramaInk/blob/master/src/assets/fotobar.jpg"
   }
 ]
 
@@ -71,7 +77,7 @@ export function CarouselPlugin() {
                         height={200}
                       />
                       <span 
-                        className="text-4xl font-semibold">{item.caption}
+                        className="text-xl font-semibold">{item.caption}
                       </span>
                     </div>
 

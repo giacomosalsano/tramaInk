@@ -1,5 +1,4 @@
 import { NavBar } from "./nav_bar";
-import Image from "next/image";
 import { CarouselPlugin } from "./carouselPlugin";
 
 
