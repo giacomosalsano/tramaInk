@@ -18,6 +18,7 @@ type ImageInfo = {
   name: string;
   caption: string;
   imageURL: string | undefined ;
+  insta: string
 }
 export interface ImagesProps {
   images: ImageInfo []
@@ -26,25 +27,28 @@ export interface ImagesProps {
 const images = [
   {
     id: 1,
-    name: "Studio 1",
-    caption: "Studio 1",
-    imageURL: "/fotostudio1.jpg"
+    name: "Victória Santana",
+    caption: "Fotógrafa",
+    imageURL: "/vicprofilepic.jpg",
+    insta: "@sant2v"
   },
   {
     id: 2,
-    name: "Studio 2",
-    caption: "Studio 2",
-    imageURL: "/fotostudio2.jpg"
+    name: "Lucas Sacazini",
+    caption: "Tatuador",
+    imageURL: "/scavazini.jpg",
+    insta: "@scavazinitattoo"
   },
   {
     id: 3,
-    name: "Bar",
-    caption: "Bar",
-    imageURL: "/fotobar.jpg"
+    name: "Guilherme Bethlem",
+    caption: "Artista",
+    imageURL: "/gui.jpg",
+    insta: "@bethlemgui"
   }
 ]
 
-export function CarouselPlugin() {
+export function CarouselTeam() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: false })
   )
@@ -73,11 +77,12 @@ export function CarouselPlugin() {
                       <Image
                         src={item.imageURL}
                         alt={item.name}
-                        width={300}
-                        height={200}
+                        width={600}
+                        height={600}
                       />
                       <span 
                         className="text-xl font-semibold">{item.caption}
+                        <a href={`https://www.instagram.com/${item.insta}/`}>{item.insta}</a>
                       </span>
                     </div>
 
