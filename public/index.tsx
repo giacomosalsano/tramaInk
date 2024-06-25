@@ -1,12 +1,12 @@
-import vicprofilepicture from "@/assets/vicprofilepic.jpg"
+import vicprofilepicture from "./vicprofilepic.jpg"
 
-import fotobar from "@/assets/fotobar.jpg"
+import fotobar from "./fotobar.jpg"
 
-import fotostudio1 from "@/assets/fotostudio1.jpg"
+import fotostudio1 from "./fotostudio1.jpg"
 
-import fotostudio2 from "@/assets/fotostudio2.jpg"
+import fotostudio2 from "./fotostudio2.jpg"
 
-import tramalogo from "@/assets/tramalogo.png"
+import tramalogo from "./tramalogo.png"
 
 export { vicprofilepicture } 
 export { fotobar }

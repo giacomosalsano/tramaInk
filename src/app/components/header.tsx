@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { tramalogo } from "../../../public"
+import { tramalogo } from "../../../public/index"
 
 export function Header() {
   return (

@@ -2,7 +2,7 @@
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image";
-import {fotobar, fotostudio1, fotostudio2, } from "../../../public"
+import { fotobar, fotostudio1, fotostudio2 } from "../../../public/index"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -28,7 +28,7 @@ const images = [
     id: 1,
     name: "Studio 1",
     caption: "Studio 1",
-    imageURL: "https://github.com/giacomosalsano/tramaInk/blob/master/src/assets/fotostudio1.jpg"
+    imageURL: "https://github.com/giacomosalsano/tramaInk/blob/1d9acf4f1f90428cae8a278e44d0f1ffea3022f4/public/fotostudio1.jpg"
   },
   {
     id: 2,
