@@ -54,6 +54,7 @@ body {
     --text-secondary: #6f6e6e;
     --text-tertiary: #d9d8d8;
     --text-disabled: #9ca3af;
+    --text-white: #FFF;
 
     --error: #981313;
     --success: #0d7f37;
@@ -76,7 +77,7 @@ body {
 
   ::-webkit-scrollbar-thumb {
     width: 1px;
-    background-color: #3f1227;
+    background-color: #242424;
     border-radius: 4px;
   }
 }

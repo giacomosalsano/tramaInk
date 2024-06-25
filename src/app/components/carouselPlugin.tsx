@@ -46,7 +46,7 @@ const images = [
 
 export function CarouselPlugin() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false })
+    Autoplay({ delay: 3000, stopOnInteraction: false })
   )
 
     const newImages = images.map((image, index) => {
@@ -71,13 +71,15 @@ export function CarouselPlugin() {
                 <CardContent className="flex aspect-auto items-center justify-center p-3">
                     <div>
                       <Image
+                        className="mb-3"
                         src={item.imageURL}
                         alt={item.name}
                         width={300}
                         height={200}
                       />
                       <span 
-                        className="text-xl font-semibold">{item.caption}
+                        className="font-Bungee font-medium text-text-secondary">
+                          {item.caption}
                       </span>
                     </div>
 

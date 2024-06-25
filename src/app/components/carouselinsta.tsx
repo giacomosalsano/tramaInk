@@ -48,7 +48,7 @@ const images = [
   }
 ]
 
-export function CarouselTeam() {
+export function CarouselInsta() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: false })
   )
@@ -74,7 +74,7 @@ export function CarouselTeam() {
               <Card>
                 <CardContent className="flex aspect-auto items-center justify-center p-3">
                     <div>
-                      <h3 className="text-lg font-semibold font-Bungee mb-2">{item.name}</h3>
+                      <h3 className="font-Bungee font-semibold text-text-primary mb-2">{item.name}</h3>
                       <Image
                         className="mb-3"
                         src={item.imageURL}
@@ -96,6 +96,8 @@ export function CarouselTeam() {
                         
                       </span>
                     </div>
+
+                  
                 </CardContent>
               </Card>
             </div>

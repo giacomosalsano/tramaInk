@@ -30,6 +30,7 @@ const config: Config = {
         'text-secondary': 'var(--text-secondary)',
         'text-tertiary': 'var(--text-tertiary)',
         'text-disabled': 'var(--text-disabled)',
+        'text-white': 'var(--text-white)',
         error: 'var(--error)',
         success: 'var(--success)',
         alert: 'var(--alert)',
