@@ -17,13 +17,14 @@ export default function Home() {
       <Header />
       <NavBar />
 
-      <div className="text-center grid-rows-5 justify-center items-center align-middle ">
+      <div className="text-center grid-rows-5 justify-center items-center align-middle mt-5 mb-5 lg:mb-0">
 
         <div 
           id="#id_estudio"
-          className="mt-5 mb-5 lg:mb-0 align-middle text-center grid-rows-5">
+          className="">
           <O_Estudio />
         </div>
+        
         
         <div 
           id="#id_quemsomos"
