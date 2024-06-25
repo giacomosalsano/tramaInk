@@ -1,6 +1,7 @@
 import { NavBar } from "./nav_bar";
 import Image from "next/image";
 import { CarouselPlugin } from "./carouselPlugin";
+import {foto_bar, foto_studio_1, foto_studio_2, } from "../../assets"
 
 export function O_Estudio () {
   return (
@@ -11,7 +12,7 @@ export function O_Estudio () {
         <p className="font-Bungee font-medium text-text-secondary">
           Conheça o espaço:
         </p>
-        <div className="max-w-screen max-h-50">
+        <div className="m-5 p-5 max-h-50">
           <CarouselPlugin />
         </div>
 

@@ -19,7 +19,7 @@ export function CarouselPlugin() {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full max-w-xs"
+      className="w-full max-w-sm"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
@@ -28,7 +28,7 @@ export function CarouselPlugin() {
           <CarouselItem key={index}>
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
+                <CardContent className="flex aspect-auto items-center justify-center p-6">
                   <span className="text-4xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>
