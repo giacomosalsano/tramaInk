@@ -1,11 +1,11 @@
 import { NavBar } from "./nav_bar";
 import Image from "next/image";
 import { CarouselPlugin } from "./carouselPlugin";
-import {foto_bar, foto_studio_1, foto_studio_2, } from "../../assets"
+
 
 export function O_Estudio () {
   return (
-    <div className="grid auto-row-max mt-10">
+    <div className="grid auto-row-max mt-32 max-w-fit">
         <h2 className="mb-3 text-2xl font-semibold font-Bungee">
           O Estúdio{" "}
         </h2>
