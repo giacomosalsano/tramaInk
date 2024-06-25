@@ -18,7 +18,10 @@ type ImageInfo = {
   name: string;
   caption: string;
   imageURL: string | undefined ;
-  insta: string
+  insta: string;
+  subtitle: string;
+  content: string;
+  contato: string;
 }
 export interface ImagesProps {
   images: ImageInfo []
@@ -27,25 +30,44 @@ export interface ImagesProps {
 const images = [
   {
     id: 1,
-    name: "Victória Santana",
-    caption: "Fotógrafa",
+    name: "Donna Visual",
+    caption: "Fotografia",
     imageURL: "/vicprofilepic.jpg",
-    insta: "sant2v"
+    insta: "sant2v",
+    subtitle: "aka Vic",
+    content: "Produção criativa & audiovisual full service.",
+    contato: "+55 11 99999-9999"
   },
   {
     id: 2,
-    name: "Lucas Scavazini",
-    caption: "Tatuador",
+    name: "MAD DOGG",
+    caption: "Pinturas customizadas",
     imageURL: "/scavazini.jpg",
-    insta: "scavazinitattoo"
+    insta: "scavazinitattoo",
+    subtitle: "aka Scavazini",
+    content: "Pinturas customizadas; reformas; restaurações; direção & produção audiovisual.",
+    contato: "+55 11 99999-9999"
   },
   {
     id: 3,
-    name: "Guilherme Bethlem",
-    caption: "Artista",
+    name: "Scavazini Garage",
+    caption: "Em Breve",
     imageURL: "/gui.jpg",
-    insta: "bethlemgui"
-  }
+    insta: "bethlemgui",
+    subtitle: "aka Bethlem",
+    content: "Customizações, restaurações, comercialização & troca de peças.",
+    contato: "+55 11 99999-9999"
+  },
+  {
+    id: 4,
+    name: "Atomic Thrash",
+    caption: "Stickers & Clothing",
+    imageURL: "/gui.jpg",
+    insta: "bethlemgui",
+    subtitle: "aka Bethlem",
+    content: "Stickers & Clothing by @bethlemgui",
+    contato: "+55 11 99999-9999"
+  },
 ]
 
 export function CarouselInsta() {
@@ -93,11 +115,8 @@ export function CarouselInsta() {
                             @{item.insta}
                             </a>
                           </p>
-                        
                       </span>
                     </div>
-
-                  
                 </CardContent>
               </Card>
             </div>
@@ -106,6 +125,13 @@ export function CarouselInsta() {
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />
+        {newImages.map((item) => (
+          <div className="mt-2"
+          key={item.id}>
+              <p className="font-Bungee mb-2">{item.subtitle}</p>
+              <p className="text-xs font-Bungee text-text-secondary">{item.content}</p>
+            </div>
+        ))}
     </Carousel>
   )
 }

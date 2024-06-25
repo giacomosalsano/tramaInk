@@ -22,7 +22,6 @@ export function Quem_Somos () {
         </div>
         <div className="">
           <p className="text-xs font-Bungee text-text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat aliquid maxime quas facilis et quos sunt iusto quod soluta cumque provident tenetur magni sint inventore, possimus quae. Cumque, quidem placeat!</p>
-          
         </div>
 
     </div>
