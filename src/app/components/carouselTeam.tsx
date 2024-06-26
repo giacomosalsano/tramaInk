@@ -18,7 +18,9 @@ type ImageInfo = {
   name: string;
   caption: string;
   imageURL: string | undefined ;
-  insta: string
+  insta: string;
+  contato: string;
+  email: string;
 }
 export interface ImagesProps {
   images: ImageInfo []
@@ -30,21 +32,36 @@ const images = [
     name: "Victória Santana",
     caption: "Fotógrafa",
     imageURL: "/vicprofilepic.jpg",
-    insta: "sant2v"
+    insta: "sant2v",
+    contato: "+55 11 949433659",
+    email: "  ",
   },
   {
     id: 2,
     name: "Lucas Scavazini",
     caption: "Tatuador",
     imageURL: "/scavazini.jpg",
-    insta: "scavazinitattoo"
+    insta: "scavazinitattoo",
+    contato: "+55 11 99999-9999",
+    email: "  ",
   },
   {
     id: 3,
     name: "Guilherme Bethlem",
     caption: "Artista",
     imageURL: "/gui.jpg",
-    insta: "bethlemgui"
+    insta: "bethlemgui",
+    contato: "+55 11 99999-9999",
+    email: "  ",
+  },
+  {
+    id: 4,
+    name: "Melso Melsão",
+    caption: "Tatuador",
+    imageURL: "/melso.jpg",
+    insta: "melsohnguy",
+    contato: "+55 11 99999-9999",
+    email: "  ",
   }
 ]
 
