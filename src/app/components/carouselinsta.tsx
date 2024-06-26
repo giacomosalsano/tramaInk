@@ -112,14 +112,14 @@ export function CarouselInsta() {
       <CarouselContent>
        {newImages.map((item) => (
           <CarouselItem key={item.id}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-auto items-center justify-center p-3">
+            <div className="p-1 ">
+              <Card className="">
+                <CardContent className="flex aspect-auto items-center justify-center p-3 ">
                     <div>
                       <h3 className="text-lg font-semibold font-Bungee mb-2">{item.name}</h3>
                       
                       <Image
-                        className="mb-3"
+                        className="mb-3 rounded-md"
                         src={item.imageURL}
                         alt={item.name}
                         width={600}

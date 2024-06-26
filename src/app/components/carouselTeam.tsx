@@ -93,7 +93,7 @@ export function CarouselTeam() {
                     <div>
                       <h3 className="text-lg font-semibold font-Bungee mb-2">{item.name}</h3>
                       <Image
-                        className="mb-3"
+                        className="mb-3 rounded-md"
                         src={item.imageURL}
                         alt={item.name}
                         width={600}

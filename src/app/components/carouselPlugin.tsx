@@ -71,11 +71,11 @@ export function CarouselPlugin() {
                 <CardContent className="flex aspect-auto items-center justify-center p-3">
                     <div>
                       <Image
-                        className="mb-3"
+                        className="mb-3 rounded-md"
                         src={item.imageURL}
                         alt={item.name}
-                        width={300}
-                        height={200}
+                        width={600}
+                        height={600}
                       />
                       <span 
                         className="font-Bungee font-medium text-text-secondary">
