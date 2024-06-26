@@ -4,7 +4,7 @@ import { CarouselPlugin } from "./carouselPlugin";
 
 export function O_Estudio () {
   return (
-    <div className="grid auto-row-max mt-32 max-w-auto">
+    <div className="justify-center mt-10 text-center ">
         <h2 className="mb-3 text-3xl font-semibold font-Bungee">
           O Estúdio{" "}
         </h2>

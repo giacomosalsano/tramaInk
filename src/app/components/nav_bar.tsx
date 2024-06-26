@@ -1,23 +1,137 @@
-export function NavBar () {
-  return (
-    <div className="fixed z-10 top-5 left-0 right-0 border-text-tertiary bg-primary flex w-full justify-center border-b pb-3 mt-20 
-    border-b-menu-foreground space-x-6">
-      <a 
-      href="#id_estudio"
-      className="font-Bungee text-sm text-text-secondary hover:drop-shadow-[0_0_0.3rem_#7c7c7c80]">O Estúdio</a>
+"use client";
 
-      <a href="#id_quemsomos"
-      className="font-Bungee text-sm text-text-secondary hover:drop-shadow-[0_0_0.3rem_#7c7c7c80]">Quem Somos?</a>
+import { useState } from "react"
+import { tv } from 'tailwind-variants'
+import { O_Estudio } from "./o_estudio";
+import { Quem_Somos } from "./quem_somos";
+import { MaisSobreNos } from "./mais_sobre_nos";
+import { Agenda } from "./agenda";
+import { Contatos } from "./contatos";
 
-      <a href="#id_agenda"
-      className="font-Bungee text-sm text-text-secondary hover:drop-shadow-[0_0_0.3rem_#7c7c7c80]">Agenda</a>
-      
-      <a href="#id_maissobrenos"
-      className="font-Bungee text-sm text-text-secondary hover:drop-shadow-[0_0_0.3rem_#7c7c7c80]">Mais Sobre Nós</a>
 
-      <a href="#id_contatos"
-      className="font-Bungee text-sm text-text-secondary hover:drop-shadow-[0_0_0.3rem_#7c7c7c80]">Contatos</a>
-    </div>
-    
-  )
+
+const tabButton = tv({
+  base: 'font-Bungee text-sm text-text-secondary duration-75',
+  variants: {
+    isActive: {
+      true: 'font-Bungee text-sm text-text-white',
+      false:
+        'font-Bungee text-sm text-text-primary hover:text-text-tertiary',
+    },
+    disabled: {
+      true: 'text-text-disabled cursor-not-allowed p-2 font-medium justify-center items-center hover:text-text-disabled',
+      false: null,
+    },
+  },
+})
+
+type Title = {
+  name: string
+  icon?: React.ReactNode
 }
+
+type Tab = {
+  title: Title
+  content: React.ReactNode
+  isDisabled?: boolean
+}
+
+export interface TabsProps {
+  tabs: Tab[]
+}
+
+const tabs = [
+  {
+    title: {name: "O Estúdio", icon:""},
+    content: <O_Estudio/>,
+    isDisabled: false,
+  },
+  {
+    title: {name: "Quem Somos?"},
+    content: <Quem_Somos/>,
+  },
+  {
+    title: {name: "Mais Sobre nós"},
+    content: <MaisSobreNos />
+  },
+  {
+    title: {name: "Agenda"},
+    content: <Agenda />,
+  },
+  {
+    title: {name: "Contatos"},
+    content: <Contatos />,
+  }
+
+]
+
+// const NavBar: React.FC<TabsProps> = ({ tabs }) => {
+//   const [activeTab, setActiveTab] = useState<number>(1)
+
+//   const selectedTab = tabs.map((tab, index) => {
+//     return {
+//       ...tab,
+//       id: index + 1,
+//     }
+//   })
+//   return (
+//     <div className="fixed z-10 top-5 left-0 right-0 border-text-tertiary bg-primary flex w-full justify-center border-b pb-3 mt-20 border-b-menu-foreground space-x-6">
+//       <div className="flex items-center gap-2">
+//         {selectedTab.map((item) => (
+//           <button
+//             className={tabButton({
+//               isActive: item.id === activeTab,
+//               disabled: item.isDisabled,
+//             })}
+//             key={item.id}
+//             onClick={() => setActiveTab(item.id)}
+//             disabled={item.isDisabled}
+//           >
+//             <span className="flex items-center gap-2">
+//               {item.title.icon} {item.title.name}
+//             </span>
+//           </button>
+//         ))}
+//       </div>
+//       <div className="mt-2 p-2 flex items-center text-justify">
+//         {selectedTab.find((tab) => tab.id === activeTab)?.content}
+//       </div>
+//     </div>
+//   )
+// }
+
+
+export function NavBar () {
+    const [activeTab, setActiveTab] = useState<number>(1)
+
+    const selectedTab = tabs.map((tab, index) => {
+      return {
+        ...tab,
+        id: index + 1,
+      }
+    })
+  return (
+        <div className="z-10 mt-10">
+              <div className="fixed right-3 left-3 top-28 space-x-3 justify-around border-b border-b-menu-foreground">
+                {selectedTab.map((item) => (
+                  <button
+                    className={tabButton({
+                      isActive: item.id === activeTab,
+                      disabled: item.isDisabled,
+                    })}
+                    key={item.id}
+                    onClick={() => setActiveTab(item.id)}
+                    disabled={item.isDisabled}
+                  >
+                    <span className="flex items-center gap-2 text-center align-middle">
+                      {item.title.icon} {item.title.name}
+                    </span>
+                  </button>
+                ))}
+              </div>
+              <div className=" flex items-center text-center align-middle place-content-center place-items-center">
+                {selectedTab.find((tab) => tab.id === activeTab)?.content}
+              </div>
+            </div>
+          )
+        }

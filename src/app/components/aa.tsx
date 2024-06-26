@@ -1,3 +1,7 @@
+import { FaDog } from "react-icons/fa";
+<FaDog /> Pet Friendly
+
+
 <Carousel
                 plugins={[plugin.current]}
                 className="max-w-xs mx-auto"

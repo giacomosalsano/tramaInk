@@ -1,6 +1,6 @@
 'use client' 
 import * as React from "react"
-import { FaWhatsapp, FaAt, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaAt, FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card"
@@ -24,6 +24,7 @@ type ImageInfo = {
   content: string;
   contato: string;
   email: string;
+  address?: string | null;
 }
 export interface ImagesProps {
   images: ImageInfo []
@@ -32,6 +33,18 @@ export interface ImagesProps {
 const images = [
   {
     id: 1,
+    name: "Trama Ink",
+    caption: "Estúdio",
+    imageURL: "/tramalogo.png",
+    insta: "tramaink",
+    subtitle: "tramaink",
+    content: "Tattoo, Fotograffia, Ateliê, Loja de produtos exclusivos &  Bar",
+    contato: "+55 11 99999-9999",
+    email: "  ",
+    address: "https://www.google.com/maps/search/Av.+General.+Ataliba+Leonel,+24+-+Santana,+São+Paulo+-+SP,+São+Paulo,+Brazil+02033000+google+maps/@-23.5081603,-46.6285755,17z/data=!3m1!4b1?entry=ttu",
+  },
+  {
+    id: 2,
     name: "Donna Visual",
     caption: "Fotografia",
     imageURL: "/donna.jpg",
@@ -42,7 +55,7 @@ const images = [
     email: "  ",
   },
   {
-    id: 2,
+    id: 3,
     name: "MAD DOGG",
     caption: "Pinturas customizadas",
     imageURL: "/maddogg.jpg",
@@ -53,7 +66,7 @@ const images = [
     email: "  ",
   },
   {
-    id: 3,
+    id: 4,
     name: "Scavazini Garage",
     caption: "Em Breve",
     imageURL: "/garage.jpg",
@@ -64,7 +77,7 @@ const images = [
     email: "  ",
   },
   {
-    id: 4,
+    id: 5,
     name: "Atomic Thrash",
     caption: "Stickers & Clothing",
     imageURL: "/atomic.jpg",
@@ -80,6 +93,7 @@ export function CarouselInsta() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: false })
   )
+
 
     const newImages = images.map((image, index) => {
       return {
@@ -103,14 +117,7 @@ export function CarouselInsta() {
                 <CardContent className="flex aspect-auto items-center justify-center p-3">
                     <div>
                       <h3 className="text-lg font-semibold font-Bungee mb-2">{item.name}</h3>
-                      <p>
-                        <a 
-                            className="font-Bungee font-medium text-text-secondary hover:text-text-primary"
-                            href={`https://www.instagram.com/${item.insta}/`}
-                            target="blank">
-                            @{item.insta}
-                          </a>
-                      </p>
+                      
                       <Image
                         className="mb-3"
                         src={item.imageURL}
@@ -119,10 +126,10 @@ export function CarouselInsta() {
                         height={600}
                       />
                       <span 
-                        className="font-Bungee font-medium text-text-secondary">
+                        className="font-Bungee font-semibold">
                           {item.caption}
                           <div>
-                            <p className="text-xs font-Bungee text-text-secondary">
+                            <p className="m-1 text-xs font-extralight font-Bungee text-text-secondary">
                               {item.content}
                             </p>
                           </div>
@@ -146,6 +153,21 @@ export function CarouselInsta() {
                             target="blank">
                               <FaInstagram />
                           </a>
+                          {item.address ? 
+                            <a
+                            className="text-text-secondary hover:text-text-primary" 
+                            href={item.address}
+                            target="blank">
+                              <FaMapMarkerAlt />
+                            </a> : ''}
+                          
+
+                            
+                            
+                            
+                              
+                            
+                            
                           </span>
                     </div>
                 </CardContent>

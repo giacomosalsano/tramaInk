@@ -17,10 +17,14 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center align-middle text-center justify-between p-3 ">
 
       <Header />
+      <div >
+           <NavBar />
+      </div>
+     
 
-      <div className="text-center grid-rows-5 justify-center items-center align-middle mt-5 mb-5 lg:mb-0">
+      {/* <div className="text-center justify-center items-center align-middle "> */}
 
-        <div 
+        {/* <div 
           id="#id_estudio"
           className="mt-5 mb-5 pb-2 lg:mb-0 align-middle text-center grid-rows-5 border-b border-menu-foreground">
           <O_Estudio />
@@ -49,9 +53,9 @@ export default function Home() {
           id="#id_contatos"
           className="mt-5 mb-5 pb-2 lg:mb-0 align-middle text-center grid-rows-5 border-b border-menu-foreground">
           <Contatos />
-        </div>
+        </div> */}
         
-      </div>
+      {/* </div> */}
 
       <div>
         <Footer />

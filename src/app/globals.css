@@ -43,9 +43,9 @@ body {
     --menu-bg: #242424;
     --menu-foreground: #8c8c8c;
 
-    --primary: #0b0b0b;
+    --primary: #000;
     --primary-hover: #242424;
-    --primary-foreground: #444444;
+    --primary-foreground: #0b0b0b;
 
     --secondary: #3c3c3c;
     --secondary-foreground: #7c7c7c;
