@@ -2,7 +2,7 @@ import { CarouselTeam } from "./carouselTeam";
 
 export function Quem_Somos () {
   return (
-    <div className="grid auto-row-max mt-10 max-w-auto">
+    <div className="justify-center mt-10 text-center z-0">
       
         <h2 className="mb-3 text-3xl font-semibold font-Bungee">
           Quem somos?{" "}

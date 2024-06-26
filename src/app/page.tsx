@@ -15,9 +15,10 @@ import { NavBar } from "./components/nav_bar";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center align-middle text-center justify-between p-3 ">
-
-      <Header />
-      <div >
+      <div className="z-50">
+        <Header />
+      </div>
+      <div className="z-40">
            <NavBar />
       </div>
      

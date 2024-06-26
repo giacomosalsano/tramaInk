@@ -2,7 +2,7 @@ import { CarouselInsta } from "./carouselinsta";
 
 export function MaisSobreNos () {
   return (
-    <div className=" justify-center mt-10 text-center ">
+    <div className=" justify-center mt-10 text-center z-0">
         <h2 className="mb-3 text-3xl font-semibold font-Bungee">
           Mais sobre nós{" "}
           <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">

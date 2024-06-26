@@ -16,7 +16,7 @@ const tabButton = tv({
     isActive: {
       true: 'font-Bungee text-sm text-text-white',
       false:
-        'font-Bungee text-sm text-text-primary hover:text-text-tertiary',
+        'font-Bungee text-sm text-text-secondary hover:text-text-tertiary',
     },
     disabled: {
       true: 'text-text-disabled cursor-not-allowed p-2 font-medium justify-center items-center hover:text-text-disabled',
@@ -111,8 +111,8 @@ export function NavBar () {
       }
     })
   return (
-        <div className="z-10 mt-10">
-              <div className="fixed right-3 left-3 top-28 space-x-3 justify-around border-b border-b-menu-foreground">
+        <div className="mt-10">
+              <div className="fixed right-0 left-0 top-24 space-x-3 justify-around border-b border-b-menu-foreground bg-primary z-40">
                 {selectedTab.map((item) => (
                   <button
                     className={tabButton({
@@ -129,7 +129,7 @@ export function NavBar () {
                   </button>
                 ))}
               </div>
-              <div className=" flex items-center text-center align-middle place-content-center place-items-center">
+              <div className="flow-root p-10 items-center text-center align-middle place-content-center place-items-center z-30 ">
                 {selectedTab.find((tab) => tab.id === activeTab)?.content}
               </div>
             </div>
