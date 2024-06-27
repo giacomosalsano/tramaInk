@@ -111,8 +111,8 @@ export function NavBar () {
       }
     })
   return (
-        <div className="mt-10">
-              <div className="fixed right-0 left-0 top-24 space-x-3 justify-around border-b border-b-menu-foreground bg-primary z-40">
+        <div className="bg-primary z-40">
+              <div className="border-b border-b-menu-foreground bg-primary space-x-3">
                 {selectedTab.map((item) => (
                   <button
                     className={tabButton({
@@ -123,13 +123,13 @@ export function NavBar () {
                     onClick={() => setActiveTab(item.id)}
                     disabled={item.isDisabled}
                   >
-                    <span className="flex items-center gap-2 text-center align-middle">
+                    <span className="flex items-center text-center align-middle">
                       {item.title.icon} {item.title.name}
                     </span>
                   </button>
                 ))}
               </div>
-              <div className="flow-root p-10 items-center text-center align-middle place-content-center place-items-center z-30 ">
+              <div className="flow-root items-center text-center align-middle place-content-center place-items-center z-30 ">
                 {selectedTab.find((tab) => tab.id === activeTab)?.content}
               </div>
             </div>
