@@ -125,18 +125,18 @@ export function Contatos () {
       <h2 className="mb-3 text-3xl font-semibold font-Bungee">
           Contatos{" "}
       </h2>
-        <p className="font-Bungee font-medium text-text-secondary mb-3">
+        <p className="font-Bungee font-medium text-text-secondary mb-3 text-center">
           Nossos contatos e redes sociais:
         </p>
-        <div className="font-Bungee text-sm ">
+        <div className="font-Bungee text-sm">
           {contato.map((user) => (
               <div 
               key={user.id} 
-              className="rounded-lg border-2 border-text-secondary m-1 md:size-auto ml-60 mr-60">
-                <div className="inline-flex size-full p-3">
+              className="rounded-lg border-2 border-text-secondary m-1 box-content h-24 w-56">
+                <div className="flex size-full p-3">
                   <div className="">
                         <Image 
-                          className="rounded-full "
+                          className="rounded-full"
                           src={user.imageURL}
                           alt={user.name} 
                           height={70}

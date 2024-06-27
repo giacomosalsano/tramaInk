@@ -112,7 +112,7 @@ export function NavBar () {
     })
   return (
         <div className="bg-primary z-40">
-              <div className="border-b border-b-menu-foreground bg-primary space-x-3">
+              <div className="border-b border-b-menu-foreground bg-primary space-x-1 md:space-x-3">
                 {selectedTab.map((item) => (
                   <button
                     className={tabButton({
