@@ -1,3 +1,5 @@
+"use client";
+
 import { CarouselTeam } from "./carouselTeam";
 
 export function Quem_Somos () {

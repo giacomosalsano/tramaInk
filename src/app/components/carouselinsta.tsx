@@ -1,4 +1,4 @@
-'use client' 
+"use client";
 import * as React from "react"
 import { FaWhatsapp, FaAt, FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay"

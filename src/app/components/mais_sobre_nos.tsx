@@ -1,3 +1,5 @@
+"use client";
+
 import { CarouselInsta } from "./carouselinsta";
 
 export function MaisSobreNos () {

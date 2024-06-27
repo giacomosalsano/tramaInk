@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { FaAt, FaInstagram, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 
@@ -130,7 +132,7 @@ export function Contatos () {
           {contato.map((user) => (
               <div 
               key={user.id} 
-              className="rounded-lg border-2 border-text-secondary m-1 md:size-auto size-full place-content-stretch">
+              className="rounded-lg border-2 border-text-secondary m-1 md:size-auto ml-60 mr-60">
                 <div className="inline-flex size-full p-3">
                   <div className="">
                         <Image 

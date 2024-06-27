@@ -1,3 +1,4 @@
+"use client";
 
 import { CarouselPlugin } from "./carouselPlugin";
 
