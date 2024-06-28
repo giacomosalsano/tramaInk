@@ -4,7 +4,7 @@ import { useState } from "react"
 import { tv } from 'tailwind-variants'
 import { O_Estudio } from "./o_estudio";
 import { Quem_Somos } from "./quem_somos";
-import { MaisSobreNos } from "./mais_sobre_nos";
+import { Projetos } from "./projetos";
 import { Agenda } from "./agenda";
 import { Contatos } from "./contatos";
 
@@ -51,8 +51,8 @@ const tabs = [
     content: <Quem_Somos/>,
   },
   {
-    title: {name: "Mais Sobre nós"},
-    content: <MaisSobreNos />
+    title: {name: "Projetos"},
+    content: <Projetos />
   },
   {
     title: {name: "Agenda"},
@@ -111,8 +111,8 @@ export function NavBar () {
       }
     })
   return (
-        <div className="bg-primary z-40">
-              <div className="border-b border-b-menu-foreground bg-primary space-x-1 md:space-x-3">
+        <div className="fixed right-0 left-0 top-[93.7px]">
+              <div className="border-b border-b-menu-foreground bg-primary space-x-2 text-xs md:space-x-3 text-center">
                 {selectedTab.map((item) => (
                   <button
                     className={tabButton({
@@ -123,13 +123,13 @@ export function NavBar () {
                     onClick={() => setActiveTab(item.id)}
                     disabled={item.isDisabled}
                   >
-                    <span className="flex items-center text-center align-middle">
+                    <h3 className="">
                       {item.title.icon} {item.title.name}
-                    </span>
+                    </h3>
                   </button>
                 ))}
               </div>
-              <div className="flow-root items-center text-center align-middle place-content-center place-items-center z-30 ">
+              <div className="p-4">
                 {selectedTab.find((tab) => tab.id === activeTab)?.content}
               </div>
             </div>

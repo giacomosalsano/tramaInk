@@ -5,7 +5,7 @@ import { CarouselPlugin } from "./carouselPlugin";
 
 export function O_Estudio () {
   return (
-    <div className="justify-center mt-10 text-center z-0">
+    <div className="justify-center text-center">
         <h2 className="mb-3 text-3xl font-semibold font-Bungee">
           O Estúdio{" "}
         </h2>
