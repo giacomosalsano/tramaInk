@@ -1,4 +1,3 @@
-"use client";
 
 import Image from "next/image";
 import { FaAt, FaInstagram, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
@@ -127,7 +126,7 @@ export function Contatos () {
   return (
     <div className="">
       <h2 className="text-center text-3xl font-semibold font-Bungee">
-          Contatos{" "}
+          Contatos
       </h2>
       <p className="font-Bungee font-medium text-text-secondary mb-3 text-center">
         Nossos contatos e redes sociais:
@@ -136,7 +135,7 @@ export function Contatos () {
         {contato.map((user) => (
           <div 
             key={user.id}
-            className="flex md:h-24 max-w-[512px] min-w-0 font-Bungee text-sm border-2 border-text-disabled rounded-md mx-2 p-2 ">
+            className="flex md:h-24 max-w-[512px] min-w-0 font-Bungee text-sm border-2 border-text-disabled rounded-md m-2 p-2 ">
             <div className="flex min-w-fit place-self-center border-2 border-blue-300">
               <Image 
                 className=" rounded-full border-2 border-yellow-600"

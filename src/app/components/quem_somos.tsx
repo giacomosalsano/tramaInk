@@ -1,4 +1,3 @@
-"use client";
 
 import { CarouselTeam } from "./carouselTeam";
 
@@ -7,7 +6,7 @@ export function Quem_Somos () {
     <div className="justify-center text-center">
       
         <h2 className="mb-3 text-3xl font-semibold font-Bungee">
-          Quem somos?{" "}
+          Quem somos?
           <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
           </span>
         </h2>

@@ -8,10 +8,24 @@ import { NavBar } from "./components/nav_bar";
 
 export default function Home() {
   return (
-    <main className="w-screen h-screen"> 
-      <Header />
-      <NavBar/>
-      <Footer />
+    <main className="min-h-screen"> 
+     <div className="">
+      <header>
+        <Header />
+      </header>
+      <NavBar />
+     </div>
+     <footer>
+        <Footer />
+     </footer>
+     
+     
+     
+     
+     
+      
+    
     </main>
+    
   );
 }

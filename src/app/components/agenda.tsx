@@ -1,4 +1,3 @@
-"use client";
 export function Agenda () {
     return (
       <div className="justify-center text-center ">

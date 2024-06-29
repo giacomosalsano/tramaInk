@@ -1,9 +1,6 @@
-"use client";
 export function Footer () {
   return (
-    <footer className="b-3 border-red-500 text-center justify-center align-middle">
-      <div className="">
-
+    <footer className="">
         <p className="text-text-disabled text-xs font-Bungee">
           &copy; made with ♥ by <></>
           <a 
@@ -13,7 +10,6 @@ export function Footer () {
            ushvodkapapi
           </a>
         </p>
-      </div>
     </footer>
   )
 }

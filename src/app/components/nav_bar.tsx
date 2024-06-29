@@ -62,43 +62,8 @@ const tabs = [
     title: {name: "Contatos"},
     content: <Contatos />,
   }
-
 ]
 
-// const NavBar: React.FC<TabsProps> = ({ tabs }) => {
-//   const [activeTab, setActiveTab] = useState<number>(1)
-
-//   const selectedTab = tabs.map((tab, index) => {
-//     return {
-//       ...tab,
-//       id: index + 1,
-//     }
-//   })
-//   return (
-//     <div className="fixed z-10 top-5 left-0 right-0 border-text-tertiary bg-primary flex w-full justify-center border-b pb-3 mt-20 border-b-menu-foreground space-x-6">
-//       <div className="flex items-center gap-2">
-//         {selectedTab.map((item) => (
-//           <button
-//             className={tabButton({
-//               isActive: item.id === activeTab,
-//               disabled: item.isDisabled,
-//             })}
-//             key={item.id}
-//             onClick={() => setActiveTab(item.id)}
-//             disabled={item.isDisabled}
-//           >
-//             <span className="flex items-center gap-2">
-//               {item.title.icon} {item.title.name}
-//             </span>
-//           </button>
-//         ))}
-//       </div>
-//       <div className="mt-2 p-2 flex items-center text-justify">
-//         {selectedTab.find((tab) => tab.id === activeTab)?.content}
-//       </div>
-//     </div>
-//   )
-// }
 
 
 export function NavBar () {
@@ -111,27 +76,27 @@ export function NavBar () {
       }
     })
   return (
-        <div className="fixed right-0 left-0 top-[93.7px]">
-              <div className="border-b border-b-menu-foreground bg-primary space-x-2 text-xs md:space-x-3 text-center">
-                {selectedTab.map((item) => (
-                  <button
-                    className={tabButton({
-                      isActive: item.id === activeTab,
-                      disabled: item.isDisabled,
-                    })}
-                    key={item.id}
-                    onClick={() => setActiveTab(item.id)}
-                    disabled={item.isDisabled}
-                  >
-                    <h3 className="">
-                      {item.title.icon} {item.title.name}
-                    </h3>
-                  </button>
-                ))}
-              </div>
-              <div className="p-4">
-                {selectedTab.find((tab) => tab.id === activeTab)?.content}
-              </div>
-            </div>
-          )
-        }
+        <div className="">
+          <div className="sticky top-[93.7px] border-b border-b-menu-foreground bg-primary space-x-2 text-xs md:space-x-5 text-center mb-24">
+            {selectedTab.map((item) => (
+              <button
+                className={tabButton({
+                  isActive: item.id === activeTab,
+                  disabled: item.isDisabled,
+                })}
+                key={item.id}
+                onClick={() => setActiveTab(item.id)}
+                disabled={item.isDisabled}
+              >
+                <h3 className="">
+                  {item.title.icon} {item.title.name}
+                </h3>
+              </button>
+            ))}
+          </div>
+          <div className="p-4">
+            {selectedTab.find((tab) => tab.id === activeTab)?.content}
+          </div>
+        </div>
+        )
+      }
