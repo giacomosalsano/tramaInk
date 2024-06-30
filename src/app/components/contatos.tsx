@@ -13,7 +13,7 @@ type ContactInfo = {
   telefone: string;
   email: string;
 }
-export interface ContactProps {
+ interface ContactProps {
   contatos: ContactInfo []
 }
 

@@ -6,7 +6,10 @@ type ProdutosType = {
   name: string;
   price: number;
   description: string;
-  imageURL: string | undefined ;
+  multiplePics?: boolean;
+  imageURL1?: string | undefined ;
+  imageURL2?: string | undefined;
+  imageURL3?: string | undefined;
   insta: string;
   info: string;
   telefone: string;
@@ -15,7 +18,6 @@ type ProdutosType = {
   color1?: string;
   color2?: string;
   color3?: string;
-  multiplePics?: boolean;
 }
 interface ProdutoProps {
   produtos: ProdutosType []
@@ -27,52 +29,72 @@ const produtos = [
     name: "Camiseta Exemplo 1",
     price: "35",
     description: "petite description lorem ipsum dolor sit amet con el desc et",
-    imageURL: "/mockup.jpg",
+    multiplePics: false,
+    imageURL1: "/mockup.jpg",
+    // imageURL2: "",
+    // imageURL3: "",
     insta: "tramaink",
     info: "Camiseta amarela - Free t-shirt Mockup",
     telefone: "+55 11 99999-9999",
-    email: " teste@hotmail.com ",
+    email: "teste@hotmail.com",
     colorOptions: false,
-    multiplePics: false,
+    // color1: "",
+    // color2: "",
+    // color3: "",
   },
   {
     id: 2,
     name: "Camiseta Branca",
     price: "75",
     description: "petite description lorem ipsum dolor sit amet con el desc et",
-    imageURL: "/mockup2.jpg",
-    insta: "sant2v",
-    info: "lorem ipsum dolor sit amet con el desc",
-    telefone: "+55 11 949433659",
-    email: " teste@hotmail.com ",
-    colorOptions: true,
     multiplePics: true,
+    imageURL1: "/mockup2.jpg",
+    imageURL2: "/mockup3.jpg",
+    // imageURL3: "",
+    insta: "tramaink",
+    info: "lorem ipsum dolor sit amet con el desc",
+    telefone: "+55 11 99999-9999",
+    email: "teste@hotmail.com",
+    colorOptions: true,
+    color1: "#ffffff",
+    color2: "#000000",
+    // color3: "",
   },
   {
     id: 3,
     name: "Boné Duende Atomic Thrash",
     price: "130",
     description: "petite description lorem ipsum dolor sit amet con el desc et",
-    imageURL: "/bone1.jpg" && "/bone2.jpg",
-    insta: "scavazinitattoo",
+    multiplePics: true,
+    imageURL1: "/bone1.jpg",
+    imageURL2: "/bone2.jpg",
+    // imageURL3: "",
+    insta: "atomicthrash",
     info: "PRÉ VENDA ATÉ DIA 15 DE JANEIRO - O valor na pré venda é de 100R$ até a data limite. Somente 10 peças limitadas disponiveis, não vai rolar o mesmo modelo de novo",
     telefone: "+55 11 99999-9999",
-    email: " teste@hotmail.com ",
+    email: "teste@hotmail.com",
     colorOptions: false,
-    multiplePics: true,
+    // color1: "",
+    // color2: "",
+    // color3: "",
   },
   {
     id: 4,
     name: "Stickers Atomic Thrash",
     price: "30",
     description: "Stickers impresso pelos brabos @stickeriasantista",
-    imageURL: "/adesivos.jpg" && "/adesivos2.jpg",
-    insta: "scavazinitattoo",
+    multiplePics: true,
+    imageURL1: "/adesivos2.jpg",
+    imageURL2: "/adesivos.jpg",
+    // imageURL3: "",
+    insta: "atomicthrash",
     info: "Unidades limitadas - 6 stickers por embalagem",
     telefone: "+55 11 99999-9999",
-    email: " teste@hotmail.com ",
+    email: "teste@hotmail.com",
     colorOptions: false,
-    multiplePics: true,
+    // color1: "",
+    // color2: "",
+    // color3: "",
   },
 ]
 
@@ -94,7 +116,7 @@ export function Lojinha () {
           <form className="border-2 border-yellow-500">
             <Image 
               className="rounded-md"
-              src={produto.imageURL}
+              src={produto.imageURL1}
               alt={produto.name} 
               height={300}
               width={300}/> 
@@ -103,21 +125,16 @@ export function Lojinha () {
                   <h3 className="font-Bungee text-sm text-text-secondary">R${produto.price}</h3>
                     <legend className="sr-only">Choose a color</legend>
                     <div className="forced-color-adjust-none border-2 border-orange-300">
-                      <label className="border-2 border-red-500">
-                        <input className="border-2 border-blue-500" type="radio" name="color-choice" value="White" />
-                          <span className="sr-only border-2 border-green-900">White</span>
+                      {produto.colorOptions === true ? 
+                        <label className="m-1">
+                          <input className="" type="radio" name="color-choice" value="" />
+                          <span className="sr-only">{produto.colorOptions}</span>
                           <span className="size-6 rounded-full border border-black border-opacity-10 bg-white"></span>
-                      </label>
-                      <label className="border-2 border-green-500">
-                        <input className="border-2 border-blue-500" type="radio" name="color-choice" value="White" />
-                          <span className="sr-only border-2 border-green-900">White</span>
-                          <span className="size-6 rounded-full border border-black border-opacity-10 bg-white"></span>
-                      </label>
-                      <label className="border-2 border-blue-700">
-                        <input className="border-2 border-blue-500" type="radio" name="color-choice" value="White" />
-                          <span className="sr-only border-2 border-green-900">White</span>
-                          <span className="size-6 rounded-full border border-black border-opacity-10 bg-white"></span>
-                      </label>
+                        </label>
+                   
+                    
+                      
+                      : '' }
                     </div>
                   </fieldset>
           </form>
