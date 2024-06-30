@@ -1,6 +1,6 @@
 export function Footer () {
   return (
-    <footer className="">
+    <footer className="  block text-center">
         <p className="text-text-disabled text-xs font-Bungee">
           &copy; made with ♥ by <></>
           <a 

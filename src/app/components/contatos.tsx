@@ -10,7 +10,7 @@ type ContactInfo = {
   description: string;
   imageURL: string | undefined ;
   insta: string;
-  contato: string;
+  telefone: string;
   email: string;
 }
 export interface ContactProps {
@@ -37,7 +37,7 @@ const contatos = [
     description: "petit description lorem ipsum dolor sit amet con el desc  et",
     imageURL: "/vicprofilepic.jpg",
     insta: "sant2v",
-    contato: "+55 11 949433659",
+    telefone: "+55 11 949433659",
     email: " teste@hotmail.com ",
   },
   {
@@ -47,7 +47,7 @@ const contatos = [
     description: "petit description lorem ipsum dolor sit amet con el desc  et",
     imageURL: "/scavazini.jpg",
     insta: "scavazinitattoo",
-    contato: "+55 11 99999-9999",
+    telefone: "+55 11 99999-9999",
     email: " teste@hotmail.com ",
   },
   {
@@ -57,7 +57,7 @@ const contatos = [
     description: "petit description lorem ipsum dolor sit amet con el desc  et",
     imageURL: "/gui.jpg",
     insta: "bethlemgui",
-    contato: "+55 11 99999-9999",
+    telefone: "+55 11 99999-9999",
     email: " teste@hotmail.com ",
   },
   {
@@ -67,7 +67,7 @@ const contatos = [
     description: "petit description lorem ipsum dolor sit amet con el desc  et",
     imageURL: "/melso.jpg",
     insta: "melsohnguy",
-    contato: "+55 11 99999-9999",
+    telefone: "+55 11 99999-9999",
     email: " teste@hotmail.com ",
   },
   {
@@ -124,29 +124,29 @@ export function Contatos () {
     }
   })
   return (
-    <div className="">
+    <div>
       <h2 className="text-center text-3xl font-semibold font-Bungee">
           Contatos
       </h2>
       <p className="font-Bungee font-medium text-text-secondary mb-3 text-center">
         Nossos contatos e redes sociais:
       </p>
-      <div className="">
+      <div className="grid place-content-center">
         {contato.map((user) => (
           <div 
             key={user.id}
-            className="flex md:h-24 max-w-[512px] min-w-0 font-Bungee text-sm border-2 border-text-disabled rounded-md m-2 p-2 ">
-            <div className="flex min-w-fit place-self-center border-2 border-blue-300">
+            className="flex md:h-24 max-w-[512px] min-w-0 font-Bungee text-sm border-2 border-text-disabled rounded-md m-2 p-2 shadow-md">
+            <div className="flex min-w-fit place-self-center p-1">
               <Image 
-                className=" rounded-full border-2 border-yellow-600"
+                className=" rounded-full"
                 src={user.imageURL}
                 alt={user.name} 
                 height={70}
                 width={70}/> 
-              <div className="min-w-fit border-2 border-red-600">
-                <p className="text-sm font-semibold border-2 border-green-600">{user.name}</p>
+              <div className="min-w-fit m-1">
+                <p className="text-sm font-semibold m-1 ">{user.name}</p>
                   
-                <div className="inline-flex self-center border-2 border-blue-600 dark:text-text-secondary">
+                <div className="inline-flex self-center  dark:text-text-secondary m-1">
                       <div className="flex space-x-2 "> 
                         <a 
                           className="hover:text-text-tertiary"
@@ -179,10 +179,10 @@ export function Contatos () {
 
             </div>
               
-            <div className="max-w-fit border-2 border-pink-300 ">
-              <p className="text-sm text-right">{user.caption}</p>
+            <div className="max-w-fit">
+              <p className="text-sm text-right m-1">{user.caption}</p>
                 
-              <p className="mt-1 text-xs dark:text-text-secondary text-text-secondary  text-right">
+              <p className="m-2 text-xs dark:text-text-secondary text-text-secondary  text-right">
                 {user.description}
               </p>
             </div>   

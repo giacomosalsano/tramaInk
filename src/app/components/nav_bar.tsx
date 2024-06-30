@@ -7,6 +7,7 @@ import { Quem_Somos } from "./quem_somos";
 import { Projetos } from "./projetos";
 import { Agenda } from "./agenda";
 import { Contatos } from "./contatos";
+import { Lojinha } from "./lojinha";
 
 
 
@@ -61,7 +62,11 @@ const tabs = [
   {
     title: {name: "Contatos"},
     content: <Contatos />,
-  }
+  },
+  {
+    title: {name: "Lojinha"},
+    content: <Lojinha />,
+  },
 ]
 
 
