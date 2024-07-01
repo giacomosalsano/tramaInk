@@ -136,10 +136,7 @@ export function Lojinha () {
 
                     {produto.color2  ? 
                       <Tooltip content={produto.color2} className="bg-text-secondary font-Bungee text-sm">
-                        <label className="m-1">
-                          <input  className="size-4 rounded-full" type="radio" name={produto.color2} value={produto.color2} color={produto.color2} />
-                          <span className="size-6 rounded-full"></span>
-                        </label>
+                       <h6>{produto.color2}</h6>
                         
                       </Tooltip>
                     : '' }
@@ -147,7 +144,8 @@ export function Lojinha () {
                     {produto.color3  ?
                       <Tooltip content={produto.color3} className="bg-text-secondary font-Bungee text-sm">
                         <label className="m-1">
-                          <input className="size-4 rounded-full" type="radio" name={produto.color3} value={produto.color3} color={produto.color3} />
+                          <input className="size-4 rounded-full" type="radio" name={produto.color3} value={produto.color3}
+                          color={produto.color3} />
                           <span className="size-6 rounded-full"></span>
                         </label>
                       </Tooltip>
