@@ -25,7 +25,7 @@ This project was developed with the following tools:
 
 This project is a link tree to use as an online "business card".
 
-- [Access the finished project online](https://giacomosalsano .com) - SOON
+- SOON
 
 
 ---
