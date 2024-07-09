@@ -6,7 +6,7 @@ Project developed by <a href="https://giacomosalsano.com">Giacomo Salsano</a> fo
 
 <p align="center">
   <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Project</a>
 </p>
 
 <br>
